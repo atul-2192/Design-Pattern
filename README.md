@@ -1,4 +1,3 @@
----
 
 # 🏛️ Java Design Patterns – A Developer’s Journey
 
@@ -7,7 +6,6 @@
 Welcome to this repository, where we explore the **art and science** of writing clean, reusable, and scalable code through design patterns.
 Think of this as your **treasure map** into the world of software architecture — where each pattern is a powerful tool forged by decades of developer wisdom.
 
----
 
 ## 📖 The Story Behind Design Patterns
 
