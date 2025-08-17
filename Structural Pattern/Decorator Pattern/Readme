@@ -1,89 +1,93 @@
 
-💳 Payment Gateway Extender
-🌟 What is this Project?
+---
 
-This project is about making online payments more flexible and smarter.
+# 💳 Payment Gateway Extender
+
+## 🌟 What is this Project?
+
+This project is about making **online payments more flexible and smarter**.
 Think of it like this:
 
-You already have a basic payment gateway (Stripe, PayPal, Razorpay).
+* You already have a **basic payment gateway** (Stripe, PayPal, Razorpay).
+* Now you want to **add extra features** like:
 
-Now you want to add extra features like:
+  * ✅ Fraud check
+  * ✅ Currency conversion (USD → INR)
+  * ✅ Discounts
+  * ✅ Reward points
 
-✅ Fraud check
+But instead of rewriting everything, we use a **plug-and-play approach**.
+So, you can **turn features ON/OFF** or **rearrange them** based on business needs.
 
-✅ Currency conversion (USD → INR)
+---
 
-✅ Discounts
+## 🎯 Why this Matters?
 
-✅ Reward points
+* **For Business**: Faster to add new features without touching old code.
+* **For Developers**: Clean design, easy testing, easy maintenance.
+* **For Customers**: Safe, smart, and transparent payments.
 
-But instead of rewriting everything, we use a plug-and-play approach.
-So, you can turn features ON/OFF or rearrange them based on business needs.
+---
 
-🎯 Why this Matters?
+## 📦 How it Works (Simple Flow)
 
-For Business: Faster to add new features without touching old code.
+1. A customer makes a payment → system takes request.
+2. Features are applied in order (Fraud Check → Discount → Rewards).
+3. Final payment is processed with the gateway.
+4. Customer gets the response (success, amount charged, etc.).
 
-For Developers: Clean design, easy testing, easy maintenance.
+---
 
-For Customers: Safe, smart, and transparent payments.
+## 🖥️ How to Use it
 
-📦 How it Works (Simple Flow)
-
-A customer makes a payment → system takes request.
-
-Features are applied in order (Fraud Check → Discount → Rewards).
-
-Final payment is processed with the gateway.
-
-Customer gets the response (success, amount charged, etc.).
-
-🖥️ How to Use it
-
-Run the project → it starts a web service.
-
-Open your browser at 👉 http://localhost:8080/swagger
-
-You’ll see a friendly dashboard to try payments.
+* Run the project → it starts a web service.
+* Open your browser at 👉 `http://localhost:8080/swagger`
+* You’ll see a **friendly dashboard** to try payments.
 
 Example request:
 
+```json
 {
   "amount": 1000,
   "currency": "INR",
   "gateway": "stripe",
   "features": ["fraudCheck", "discount", "rewardPoints"]
 }
-
+```
 
 Response:
 
+```json
 {
   "status": "SUCCESS",
   "finalAmount": 900,
   "message": "Processed with fraudCheck → discount → rewardPoints"
 }
+```
 
-🔍 Example Use-Cases
+---
 
-E-Commerce: Add discounts during sales season.
+## 🔍 Example Use-Cases
 
-Banking: Add fraud checks for international transactions.
+* **E-Commerce**: Add discounts during sales season.
+* **Banking**: Add fraud checks for international transactions.
+* **FinTech**: Reward points on digital wallet payments.
 
-FinTech: Reward points on digital wallet payments.
+---
 
-📊 Who Can Read This?
+## 📊 Who Can Read This?
 
-Engineers → To learn how to extend payment flows cleanly.
+* **Engineers** → To learn how to extend payment flows cleanly.
+* **HR / Managers** → To see how the system helps business.
+* **Clients** → To understand the value of flexible payments.
 
-HR / Managers → To see how the system helps business.
+---
 
-Clients → To understand the value of flexible payments.
+## 🚀 Future Roadmap
 
-🚀 Future Roadmap
+* Connect with **real gateways** like Stripe, Razorpay.
+* Add **loyalty programs**.
+* Add **AI-based fraud detection**.
 
-Connect with real gateways like Stripe, Razorpay.
+---
 
-Add loyalty programs.
-
-Add AI-based fraud detection.
